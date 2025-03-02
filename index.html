@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome</h1>
+        <div id="form-container">
+            
+
+            <!-- Signup Form -->
+            <form id="signup-form">
+                <h2>Sign Up</h2>
+                <input type="text" id="signup-name" placeholder="Full Name" required>
+
+                <input type="email" id="signup-email" placeholder="Email" required>
+
+                <input type="tel" id="signup-phone" placeholder="Phone Number (e.g., +1234567890)" required>
+
+                <div class="password-container">
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <span class="toggle-password" onclick="togglePassword('signup-password')">👁️</span>
+                </div>
+                <p id="password-hint">Password must contain:</p>
+                <ul id="password-requirements">
+                    <li id="length">✔️ At least 8 characters</li>
+                    <li id="uppercase">✔️ One uppercase letter</li>
+                    <li id="lowercase">✔️ One lowercase letter</li>
+                    <li id="number">✔️ One number</li>
+                    <li id="special">✔️ One special character (@$!%*?&)</li>
+                </ul>
+
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+            </form>
+
+            <!-- Login Form -->
+            <form id="login-form" style="display: none;">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+
+                <div class="password-container">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <span class="toggle-password" onclick="togglePassword('login-password')">👁️</span>
+                </div>
+
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
